@@ -1,6 +1,6 @@
 <?php
-
-function dbFunction()
+// This function return a PDO class connected to the DB that has already been created //
+function connexion()
 {
     try {
         $db = new PDO(
@@ -20,9 +20,10 @@ function dbFunction()
     }
 }
 
+// This function return all the products (and their different values/columns) that are in the DB
 function findAll()
 {
-    $db = dbFunction();
+    $db = connexion();
 
     $sqlQuery = 'SELECT * FROM product';
     $storeStatement = $db->prepare($sqlQuery);
@@ -31,9 +32,11 @@ function findAll()
     $store = $storeStatement->fetchAll();
     return $store;
 }
+
+// This function return the product corresponding to the id in the parameter
 function findOneById($id)
 {
-    $db = dbFunction();
+    $db = connexion();
 
     $sqlQuery = 'SELECT * FROM product WHERE id= :id';
     $storeStatement = $db->prepare($sqlQuery);
@@ -43,7 +46,7 @@ function findOneById($id)
     return $store;
 }
 function insertProduct($name, $price, $description){
-    $db = dbFunction();
+    $db = connexion();
     $sqlQuery = 'INSERT INTO product (name, price, description)
     VALUES (:name, :price, :description)';
 
