@@ -44,4 +44,5 @@ function findOneById($id)
     $storeStatement->execute([':id'=>$id]);
     $store = $storeStatement->fetch();
     return $store;
+    ;
 }
