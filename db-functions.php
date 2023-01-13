@@ -45,13 +45,3 @@ function findOneById($id)
     $store = $storeStatement->fetch();
     return $store;
 }
-function insertProduct($name, $price, $description){
-    $db = connexion();
-    $sqlQuery = 'INSERT INTO product (name, price, description)
-    VALUES (:name, :price, :description)';
-
-    $storeStatement = $db->prepare($sqlQuery);
-    $storeStatement->execute([':name'=>$name, ':price'=>$price, ':description'=>$description]);
-    $store = $storeStatement->fetch();
-    return $store;
-}
