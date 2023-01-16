@@ -1,9 +1,21 @@
 <?php
 session_start(); //Function used to create & save the informations in a session
-
+require("db-functions.php");
 
 
 switch ($_GET['action']) {
+
+	case 'ajouterProduit':
+		$produit = findOneById($_GET["id"]);  // rechercher le produit par l'identifiant
+		$product = [
+			"name" => $produit["nameProduct"],
+			"price" => $produit["price"],
+			"qtt" => 1,
+			"total" => $produit["price"] 
+		];
+		$_SESSION['products'][] = $product;
+		header("Location:recap.php");
+		break;
 
 	case 'addProduct':
 		if (isset($_POST['submit'])) { // Limit the access to traitement.php to the HTTP requests that come from the form only
@@ -23,36 +35,36 @@ switch ($_GET['action']) {
 				$_SESSION['products'][] = $product; // Stock the datas in a session
 
 				$_SESSION['message'] = "<p class ='bg-success text-light'>Le produit " . $product['name'] . " a bien été ajouté au panier</p>";
-			} //var_dump( $_SESSION['products']);die;
+			}
 		}
 
 		header("Location:admin.php"); // Send a new form to the user.
 		break;
 
 	case 'minusQtt': //decrease the quantity for a product
-		if ($_SESSION['products'][$_GET['admin']]['qtt'] == 1) {
-			header('Location:traitement.php?action=deleteQtt&index=' . $_GET['admin']);
+		if ($_SESSION['products'][$_GET['index']]['qtt'] == 1) {
+			header('Location:traitement.php?action=deleteQtt&index=' . $_GET['index']);
 			break;
 		}
-		$_SESSION['products'][$_GET['admin']]['qtt']--;
+		$_SESSION['products'][$_GET['index']]['qtt']--;
 
 		header("Location:recap.php");
 		break;
 
 	case 'addQtt': //increase the quantity for a product
-		$_SESSION['products'][$_GET['admin']]['qtt']++;
+		$_SESSION['products'][$_GET['index']]['qtt']++;
 		header("Location:recap.php");
 		break;
 
 	case 'deleteQtt': //delete the quantity for a product &indicate a confirmation message
-		unset($_SESSION['products'][$_GET['admin']]);
+		unset($_SESSION['products'][$_GET['index']]);
 		$_SESSION['messageDelete'] = "<p class='error'>Article supprimé du panier";
 		$_SESSION['message'] = "<p class ='bg-danger text-light'>Le produit " . $product['name'] . " a bien été supprimé</p>";
 		header("Location:recap.php");
 
 		break;
 	case 'deleteCart': // delete the entire quantity in the cart
-		unset($_SESSION['products'][$_GET['admin']]['total']);
+		unset($_SESSION['products'][$_GET['index']]['total']);
 			header('Location:recap.php');
 		break;
 		}

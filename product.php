@@ -8,7 +8,7 @@ session_start();
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://kit.fontawesome.com/f937b853a3.js" crossorigin="anonymous"></script>
-	<title> Récapitulatif des produits </title>
+	<title> Presentation des produits </title>
 	<link rel="stylesheet" href=https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css>
 
 </head>
@@ -30,8 +30,9 @@ session_start();
 		</span>
 	</a>
 </nav>
-
-<main>
+<body>
+	<main>
+	<form action="traitement.php?action=addProduct" method="post"> <!-- "action" indicate the form target, the file to reach when the user will send the form -->
 <a href="#" class="link-primary">Sega Megadrive</a>
 <p class="p-3 mr-3 border border-info w-25 p-3 mr-3" > La Mega Drive, ou Sega Genesis en Amerique du Nord, est une console de jeux vidéo de quatrieme génération conçue et commercialisée par le constructeur japonais Sega Enterprise,LTD. <br>
 La Mega Drive est la troisieme console de Sega, elle succède à la Master System.</p> 
@@ -42,3 +43,8 @@ La Mega Drive est la troisieme console de Sega, elle succède à la Master Syste
 			<input type="submit" name="submit" value="Ajouter le produit" class="p-3 mb-2 btn btn-outline-info">
 		</p>
 </main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+
+</html>
