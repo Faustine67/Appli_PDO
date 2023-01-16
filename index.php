@@ -37,16 +37,22 @@ session_start();
     $store = findAll();
 
 	foreach ($store as $product) { ?>
-<main> <!--We link the name from the DB to the application -->
-		<a href="#" class="link-primary"><?=$product["nameProduct"] ?></a> <!-- The information "<?=" / "?>" is equal to an "echo" -->
-		<p class="p-3 mr-3 border border-info w-25 p-3 mr-3" ><?=$product["description"]?></p> 
-		
-		<p class="p-3 mr-3font-weight-bold"><?=$product["price"]?></p>
-		
-		<p>
-					<input type="submit" name="submit" value="Ajouter le produit" class="p-3 mb-2 btn btn-outline-info">
-				</p>
-		</main>
+<main class="row">
+  <div class="col align-items-center text-center">
+    <a href="#" class="link-primary"><?=$product["nameProduct"] ?></a>
+  </div>
+  <div class="col align-items-center text-center">
+    <p class="p-3 mr-3 border border-info w-25 p-3 mr-3" ><?=$product["description"]?></p>
+  </div>
+  <div class="col align-items-center text-center">
+    <p class="p-3 mr-3font-weight-bold"><?=$product["price"]?></p>
+    <p>
+      <input type="submit" name="submit" value="Ajouter le produit" class="p-3 mb-2 btn btn-outline-info">
+    </p>
+  </div>
+</main>
+
+
 <?php
 }
 
