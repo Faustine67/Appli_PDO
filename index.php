@@ -14,7 +14,21 @@ session_start();
 </head>
 	<nav class="d-flex flex-row justify-content-end" class="navbar navbar-light" style="background-color: #e3f2fd;">
 		<a class="p-3 text-grey" style="text-decoration:none" href="index.php">Ajout Article</a>
-		<a class="p-3 text-grey" style="text-decoration:none" href="recap.php"> <i class="fa-solid fa-cart-shopping"></i> <span><?php echo count($_SESSION['products'])?></span></a>
+		<a class="p-3 text-grey" style="text-decoration:none" href="recap.php"> 
+			<i class="fa-solid fa-cart-shopping"></i> 
+				<span>
+				<?php 
+					//condition ternaire
+					//echo (isset($_SESSION['products'])) ? count($_SESSION['products']) : "0";
+
+					if(isset($_SESSION['products'])){
+						echo count($_SESSION['products']);
+					} else {
+						echo "0";
+					}
+				?>
+				</span>
+		</a>
 	</nav>
 
     <?
