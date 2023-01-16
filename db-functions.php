@@ -4,7 +4,7 @@ function connexion()
 {
     try {
         $db = new PDO(
-            'mysql:host=localhost;dbname=store_sp;charset=utf8',
+            'mysql:host=localhost;dbname=store;charset=utf8',
             'root',
             '',
             [

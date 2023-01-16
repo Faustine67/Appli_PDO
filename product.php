@@ -30,3 +30,15 @@ session_start();
 		</span>
 	</a>
 </nav>
+
+<main>
+<a href="#" class="link-primary">Sega Megadrive</a>
+<p class="p-3 mr-3 border border-info w-25 p-3 mr-3" > La Mega Drive, ou Sega Genesis en Amerique du Nord, est une console de jeux vidéo de quatrieme génération conçue et commercialisée par le constructeur japonais Sega Enterprise,LTD. <br>
+La Mega Drive est la troisieme console de Sega, elle succède à la Master System.</p> 
+
+<p class="p-3 mr-3font-weight-bold">46,76€</p>
+
+<p>
+			<input type="submit" name="submit" value="Ajouter le produit" class="p-3 mb-2 btn btn-outline-info">
+		</p>
+</main>
