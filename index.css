@@ -10,7 +10,7 @@ body {
   background-color: beige;
 }
   
-  /* Define styles for navigation */
+  /* DEFINE THE STYLE OF THE NAVIGATION BAR */
   nav {
     background-color: rgb(41, 192, 230);
     color: #fff;
@@ -19,7 +19,7 @@ body {
     justify-content: space-between;
     padding: 20px;
   }
-
+/* Logo */
   .logo {
     display: flex;
     align-items: right;
@@ -28,6 +28,7 @@ body {
     margin-left: auto;
   }
 
+/* research bar */
   form {
     display: flex;
     justify-content: right;
@@ -50,18 +51,18 @@ body {
     font-size: 15px;
     align-items: top;
   }
+/* Ajouter un produit */
 
-  
-  /* Define styles for shopping cart */
+/* cart */
+
   .cart {
     display: flex;
     align-items: center;
-  }
-  
-  .cart img {
+    color: white;
     height: 50px;}
 
-  /* Define the organisation of the products */
+  /* DEFINE THE STYLE OF THE PRODUCTS */
+  /* General style */
   main {
     display: grid;
     grid-template-columns: repeat(50px);
@@ -71,7 +72,7 @@ body {
     padding: 20px;
   }
   
-  /*Define style for product cards  */
+  /*Define style for product  */
   form {
     background-color: #fff;
     padding: 20px;
@@ -81,7 +82,7 @@ body {
     justify-content: center;
   }
   
-  /* Define style inside the cards */
+  /* Define style inside product */
   a {
     color: #000;
     text-decoration: none;
