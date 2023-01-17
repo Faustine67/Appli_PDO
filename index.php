@@ -15,9 +15,8 @@
       <div class="logo">
         <!-- <img src="Images/logo.png"> -->
         <form>
-          <label for="search-input">Rechercher</label>
           <input type="search" id="search-input" placeholder="Rechercher...">
-          <button type="submit">Rechercher</button>
+          <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
       </div>
       <div class="cart">

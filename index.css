@@ -23,24 +23,23 @@ body {
   .logo {
     display: flex;
     align-items: right;
-  }
-  
-  .logo img {
     height: 50px;
-    margin-right: 20px;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   form {
     display: flex;
-    align-items: center;
+    justify-content: right;
+    margin-left: auto;
+    ;
   }
   
   input[type="search"] {
     padding: 10px;
     border: none;
     background-color: #ddd;
-    margin-right: 10px;
-    font-size: 1.1rem;
+    font-size:25px;
   }
   
   button[type="submit"] {
@@ -48,14 +47,10 @@ body {
     color: #000;
     padding: 10px 20px;
     border: none;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 15px;
+    align-items: top;
   }
-  
-  button[type="submit"]:hover {
-    background-color: #ddd;
-  }
+
   
   /* Define styles for shopping cart */
   .cart {
@@ -65,7 +60,7 @@ body {
   
   .cart img {
     height: 50px;}
-    
+
   /* Define the organisation of the products */
   main {
     display: grid;
