@@ -1,34 +1,79 @@
-/* Base */
-
-*{
+/* Define global styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
     padding: 0;
-    margin:0;
-}
-
-#background{
-    background-color: beige;
-    min-height: 100vh;
-}
-
-main {
-    display:flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-/* Barre de navigation */
-nav {
-    display: flex;
-    align-items: center;
-    background-color: rgb(41, 192, 230);
-    color: rgb(240, 244, 245);
-    padding: 10px 20px;
   }
   
-  .logo.png {
-    margin-right: 20px;
+  body {
+    font-family: Arial, sans-serif;
+    background-color: beige;
+  }
+  
+  /* Define grid for product cards */
+  main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  /* Define styles for product cards */
+  form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+  
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+  
+  /* Define styles for navigation */
+  nav {
+    background-color: rgb(41, 192, 230);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
     height: 50px;
-    width: 50px;
+    margin-right: 20px;
   }
   
   form {
@@ -37,26 +82,33 @@ nav {
   }
   
   input[type="search"] {
-    padding: 5px;
+    padding: 10px;
     border: none;
     background-color: #ddd;
-    margin-right: 5px;
+    margin-right: 10px;
+    font-size: 1.1rem;
   }
   
   button[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 5px 10px;
+    background-color: #fff;
+    color: #000;
+    padding: 10px 20px;
     border: none;
+    font-size: 1.1rem;
     cursor: pointer;
+    transition: background-color 0.3s ease;
   }
   
-  .recap {
-    margin-left: 20px;
+  button[type="submit"]:hover {
+    background-color: #ddd;
+  }
+  
+  /* Define styles for shopping cart */
+  .cart {
+    display: flex;
+    align-items: center;
   }
   
   .cart img {
     height: 50px;
-  }
-  
   
