@@ -40,9 +40,11 @@ session_start();
 	<p> <?=($product['nameProduct']) ?></p>
 	<p> <?=($product ['description']) ?></p>
 	<p> <?=($product ['price']) ?></p>				
+	<form action="traitement.php?action=ajouterProduit" method="post">
 	<p>
-				<input type="submit" name="submit" value="Ajouter le produit" class="p-3 mb-2 btn btn-outline-info">
-			</p>
+			<input type="submit" name="submit" value="Ajouter le produit" class="p-3 mb-2 btn btn-outline-info">
+		</p>
+			
 	</main>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
