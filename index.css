@@ -51,7 +51,7 @@ body {
     font-size: 15px;
     align-items: top;
   }
-/* Ajouter un produit */
+/* Ajouter un article */
 
 /* cart */
 
@@ -95,7 +95,7 @@ body {
     margin-bottom: 10px;
     font-size: 1rem;
   }
-  
+  /* Ajouter le produit */
   input {
     background-color: #4CAF50;
     color: #fff;
