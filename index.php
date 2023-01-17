@@ -40,7 +40,7 @@ session_start();
 
 			<main class="card" style="width: 18rem;">
 			<ul class="list-group list-group-flush">
-				<li><a href="#" class="link-primary p-3 mr-3 border-info w-25"><?=$product["nameProduct"] ?></a></li>
+				<li><a href="product.php?id=<?= $product["id"]?>" class="link-primary p-3 mr-3 border-info w-25"><?=$product["nameProduct"] ?></a></li>
 				<li><p class="p-3 mr-3 border border-info" ><?=$product["description"]?></p></li>
 				<li><p class="p-3 mr-3font-weight-bold"><?=$product["price"]."€"?></p> </li>
 				<li><p><input type="submit" name="submit" value="Ajouter le produit" class="p-3 mb-2 btn btn-outline-info"></p><li>
