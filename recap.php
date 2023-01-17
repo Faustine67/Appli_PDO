@@ -12,6 +12,8 @@ session_start();
 	<link rel="stylesheet" href=https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css>
 
 </head>
+<body>
+	<header>
 <nav class="d-flex flex-row justify-content-end" class="navbar-light" style="background-color: #e3f2fd;">
 	<a class="p-3 text-grey" style="text-decoration:none" href="index.php">Ajout Article</a>
 	<a class="p-3 text-grey" style="text-decoration:none" href="recap.php"> 
@@ -30,8 +32,8 @@ session_start();
 		</span>
 	</a>
 </nav>
-
-<body>
+	</header>
+	<main>
 	<?php
 	if (isset($_SESSION['message'])) {
 
@@ -73,6 +75,7 @@ session_start();
 		"</table>";
 	}
 	?>
+	</main>
 </body>
 
 </html>

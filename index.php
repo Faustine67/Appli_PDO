@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="index1.css">
+  <link rel="stylesheet" href="index.css">
   <script src="https://kit.fontawesome.com/f937b853a3.js" crossorigin="anonymous"></script>
   <title>Liste produit</title>
 </head>
@@ -13,7 +13,7 @@
   <header>
     <nav>
       <div class="logo">
-        <img src="logo.png" alt="logo">
+        <!-- <img src="Images/logo.png"> -->
         <form>
           <label for="search-input">Rechercher</label>
           <input type="search" id="search-input" placeholder="Rechercher...">
@@ -22,8 +22,8 @@
       </div>
       <div class="cart">
         <a href="index.php">Ajout Article</a>
-        <i class="fa-regular fa-cart-shopping"></i>
-        <a href="recap.php">
+        <a href="recap.php" >
+        <i class="fa-solid fa-cart-shopping"></i>
           <span>
             <?php
             if (isset($_SESSION['products'])) {
