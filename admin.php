@@ -42,7 +42,6 @@ session_start();
 	</span>
 	<form action="traitement.php?action=addProduct" method="post"> <!-- "action" indicate the form target, the file to reach when the user will send the form -->
 		<p>
-			<!-- <form class ="main-style"> -->
 			<label class="p-3 mb-2 form-label">
 				Nom du produit:
 				<input type="text" name="name" id="product-name" class="form-control">
